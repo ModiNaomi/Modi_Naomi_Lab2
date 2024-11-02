@@ -7,5 +7,6 @@
         public ICollection<BookCategory>? BookCategories { get; set; }
         public string FirstName { get; internal set; }
         public string LastName { get; internal set; }
+        public ICollection<Book>? Books { get; set; }
     }
 }

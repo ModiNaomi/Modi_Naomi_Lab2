@@ -22,6 +22,8 @@ namespace Modi_Naomi_Lab2.Models
 
         public int? AuthorID { get; set; }
         public Author? Author { get; set; }
+        public int? CategoryID { get; set; } 
+        public Category? Category { get; set; }
 
         public ICollection<BookCategory>? BookCategories { get; set; }
     }
