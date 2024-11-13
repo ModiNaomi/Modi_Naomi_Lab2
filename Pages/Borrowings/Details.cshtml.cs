@@ -39,5 +39,22 @@ namespace Modi_Naomi_Lab2.Pages.Borrowings
             }
             return Page();
         }
+        public async Task<IActionResult> OnPostAsync(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var borrowing = await _context.Borrowing.FindAsync(id);
+            if (borrowing != null)
+            {
+                Borrowing = borrowing;
+                _context.Borrowing.Remove(Borrowing);
+                await _context.SaveChangesAsync();
+            }
+
+            return RedirectToPage("./Index");
+        }
     }
 }
