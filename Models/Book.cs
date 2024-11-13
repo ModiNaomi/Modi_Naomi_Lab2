@@ -26,5 +26,6 @@ namespace Modi_Naomi_Lab2.Models
         public Category? Category { get; set; }
 
         public ICollection<BookCategory>? BookCategories { get; set; }
+        public ICollection<Borrowing>? Borrowings { get; set; }
     }
 }
